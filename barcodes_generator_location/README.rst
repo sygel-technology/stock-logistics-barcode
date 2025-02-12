@@ -17,37 +17,36 @@ Generate Barcodes for Stock Locations
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fstock--logistics--barcode-lightgray.png?logo=github
-    :target: https://github.com/OCA/stock-logistics-barcode/tree/16.0/barcodes_generator_location
+    :target: https://github.com/OCA/stock-logistics-barcode/tree/17.0/barcodes_generator_location
     :alt: OCA/stock-logistics-barcode
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/stock-logistics-barcode-16-0/stock-logistics-barcode-16-0-barcodes_generator_location
+    :target: https://translation.odoo-community.org/projects/stock-logistics-barcode-17-0/stock-logistics-barcode-17-0-barcodes_generator_location
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/stock-logistics-barcode&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/stock-logistics-barcode&target_branch=17.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module expands Odoo functionality, allowing user to generate barcode
-depending on a given barcode rule for Stock Locations.
+This module expands Odoo functionality, allowing user to generate
+barcode depending on a given barcode rule for Stock Locations.
 
-For example, a typical pattern for partners is  "042........." that means
-that:
-* the EAN13 code will begin by '042'
-* followed by 0 digits (named Barcode Base in this module)
-* a 13 digit control
+For example, a typical pattern for partners is "042........." that means
+that: \* the EAN13 code will begin by '042' \* followed by 0 digits
+(named Barcode Base in this module) \* a 13 digit control
 
 With this module, it is possible to:
 
-* Assign a pattern (barcode.rule) to a stock.location
+-  Assign a pattern (barcode.rule) to a stock.location
 
-* Define a Barcode base:
-    * manually, if the base of the barcode must be set by a user. (typically an
-      internal code defined in your company)
-    * automatically by a sequence, if you want to let Odoo to increment a
-      sequence. (typical case of a customer number incrementation)
+-  Define a Barcode base:
 
-* Generate a barcode, based on the defined pattern and the barcode base
+   -  manually, if the base of the barcode must be set by a user.
+      (typically an internal code defined in your company)
+   -  automatically by a sequence, if you want to let Odoo to increment
+      a sequence. (typical case of a customer number incrementation)
+
+-  Generate a barcode, based on the defined pattern and the barcode base
 
 **Table of contents**
 
@@ -57,27 +56,31 @@ With this module, it is possible to:
 Configuration
 =============
 
-To configure this module, see the 'Configuration' Section of the description
-of the module 'barcodes_generator_abstract'
+To configure this module, see the 'Configuration' Section of the
+description of the module 'barcodes_generator_abstract'
 
 Usage
 =====
 
 To use this module, you need to:
 
-* Go to a Stock Location form
+-  Go to a Stock Location form
 
 1 for manual generation
-    * Set a Barcode Rule
-    * Set a Barcode Base
-    * click on the button 'Generate Barcode (Using Barcode Rule)'
+
+-  Set a Barcode Rule
+-  Set a Barcode Base
+-  click on the button 'Generate Barcode (Using Barcode Rule)'
 
 2 for automatic generation
-    * Set a Barcode Rule
-    * click on the button 'Generate Base (Using Sequence)'
-    * click on the button 'Generate Barcode (Using Barcode Rule)'
 
-.. image:: https://raw.githubusercontent.com/barcodes_generator/static/description/stock_location_sequence_generation.png
+-  Set a Barcode Rule
+-  click on the button 'Generate Base (Using Sequence)'
+-  click on the button 'Generate Barcode (Using Barcode Rule)'
+
+|image|
+
+.. |image| image:: https://raw.githubusercontent.com/barcodes_generator/static/description/stock_location_sequence_generation.png
 
 Bug Tracker
 ===========
@@ -85,7 +88,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/stock-logistics-barcode/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/stock-logistics-barcode/issues/new?body=module:%20barcodes_generator_location%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/stock-logistics-barcode/issues/new?body=module:%20barcodes_generator_location%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -93,27 +96,28 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * LasLabs
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Dave Lasley <dave@laslabs.com>
-* `Tecnativa <https://www.tecnativa.com>`_:
+-  Dave Lasley <dave@laslabs.com>
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * David Vidal
-  * Ernesto Tejeda
+   -  David Vidal
+   -  Ernesto Tejeda
 
 Other credits
-~~~~~~~~~~~~~
+-------------
 
-* Icon of the module is based on the Oxygen Team work and is under LGPL licence:
-  http://www.iconarchive.com/show/oxygen-icons-by-oxygen-icons.org.html
+-  Icon of the module is based on the Oxygen Team work and is under LGPL
+   licence:
+   http://www.iconarchive.com/show/oxygen-icons-by-oxygen-icons.org.html
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -125,6 +129,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/stock-logistics-barcode <https://github.com/OCA/stock-logistics-barcode/tree/16.0/barcodes_generator_location>`_ project on GitHub.
+This module is part of the `OCA/stock-logistics-barcode <https://github.com/OCA/stock-logistics-barcode/tree/17.0/barcodes_generator_location>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
