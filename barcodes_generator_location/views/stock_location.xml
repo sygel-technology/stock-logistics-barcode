@@ -22,30 +22,22 @@
                     <field name="generate_type" invisible="1" />
                     <field
                         name="barcode_base"
-                        attrs="{
-                                    'invisible': [('barcode_rule_id', '=', False)],
-                                    'readonly': [('generate_type', '!=', 'manual')],
-                                }"
+                        invisible="not barcode_rule_id"
+                        readonly="generate_type != 'manual'"
                         groups="barcodes_generator_abstract.generate_barcode"
                     />
                     <button
                         name="generate_base"
                         type="object"
                         string="Generate Base (Using Sequence)"
-                        attrs="{'invisible': ['|',
-                                        ('generate_type', '!=', 'sequence'),
-                                        ('barcode_base', '!=', 0),
-                                    ]}"
+                        invisible="generate_type != 'sequence' or barcode_base"
                         groups="barcodes_generator_abstract.generate_barcode"
                     />
                     <button
                         name="generate_barcode"
                         type="object"
                         string="Generate Barcode"
-                        attrs="{'invisible': ['|',
-                                    ('barcode_rule_id', '=', False),
-                                    ('barcode_base', '=', 0),
-                                    ]}"
+                        invisible="not barcode_rule_id or not barcode_base"
                         groups="barcodes_generator_abstract.generate_barcode"
                         colspan="2"
                     />
